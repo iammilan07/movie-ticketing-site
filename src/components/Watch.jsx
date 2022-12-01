@@ -14,15 +14,20 @@ const Watch = () => {
     dispatch(removeWishList(id));
   };
   return (
-    <Box className="watch-list">
+    <Box className="watch-list" paddingX="100px">
       <h1 className="heading_style">Your WatchList !!</h1>
-
-      {incrementWishList.map((value) => {
-        return (
-          <div className="container mt-2" style={{ display: "flex" }}>
-            <section className="container mt-3">
-              <div className="items-details">
-                <HStack>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="space-between"
+      >
+        {incrementWishList.map((value) => {
+          return (
+            <Box width={{ base: "100%", md: "50%", lg: "50%" }}>
+              <Box className="container mt-5">
+                <HStack justifyContent="center">
                   <Box>
                     <Box>
                       <img src={value.imgsrc} alt="MovieImage" />
@@ -59,11 +64,11 @@ const Watch = () => {
                     </Box>
                   </Box>
                 </HStack>
-              </div>
-            </section>
-          </div>
-        );
-      })}
+              </Box>
+            </Box>
+          );
+        })}
+      </Box>
     </Box>
   );
 };

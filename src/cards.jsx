@@ -1,20 +1,32 @@
 import React from "react";
 import "./index.css";
 import { useSelector } from "react-redux";
-import { selectIncrementWishList } from "./redux/increment/selector";
+import {
+  selectIncrementWishList,
+  selectIsInWatchList,
+} from "./redux/increment/selector";
 import { Link } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
-import { addToWishList } from "./redux/increment/Numberslice";
+import { addToWishList, nextname } from "./redux/increment/Numberslice";
 import { useDispatch } from "react-redux";
+import { removeWishList } from "./redux/increment/Numberslice";
 
 function Cards(props) {
   const incrementWishList = useSelector(selectIncrementWishList);
+
+  const isInWatchList = useSelector((state) =>
+    selectIsInWatchList(props?.id, state)
+  );
 
   const dispatch = useDispatch();
 
   const handleWishListAdd = () => {
     dispatch(addToWishList(props));
     dispatch(incrementWishList());
+    dispatch(nextname);
+  };
+  const handleRemove = (id) => {
+    dispatch(removeWishList(id));
   };
 
   return (
@@ -40,9 +52,19 @@ function Cards(props) {
               <button>Watch Trailer</button>
             </a>
             <br />
-            <Button onClick={handleWishListAdd} bg="#5ba8f5" mt="10px">
-              Add To WatchList
-            </Button>
+            {!isInWatchList ? (
+              <Button onClick={handleWishListAdd} bg="#5ba8f5" mt="10px">
+                Add to wishlist
+              </Button>
+            ) : (
+              <Button
+                marginLeft="40px"
+                marginTop="10px"
+                onClick={() => handleRemove(props.id)}
+              >
+                Remove From WatchList
+              </Button>
+            )}
           </div>
         </div>
       </div>
