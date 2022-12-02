@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import numberReducer from "./redux/increment/Numberslice";
+import Wishlistslice from "./redux/wishlist/Wishlistslice";
 
 export const store = configureStore({
   reducer: {
-    wishlist: numberReducer,
+    wishlist: Wishlistslice,
   },
 });

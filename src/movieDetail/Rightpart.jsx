@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Style.css";
 import { useLocation } from "react-router-dom";
 
-const Movieseats = () => {
+const Rightpart = () => {
   const location = useLocation();
   const { movieDetail } = location.state;
 
@@ -162,4 +162,4 @@ const Movieseats = () => {
   );
 };
 
-export default Movieseats;
+export default Rightpart;

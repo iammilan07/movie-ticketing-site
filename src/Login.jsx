@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectincrease } from "./redux/increment/selector";
-import { incrementerr } from "./redux/increment/Action";
+import { incrementerr } from "./redux/wishlist/Action";
 
 const App = () => {
   const dispatch = useDispatch();

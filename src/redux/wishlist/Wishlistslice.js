@@ -6,7 +6,7 @@ const initialState = {
   value: 0,
 };
 
-export const Numberslice = createSlice({
+export const Wishlistslice = createSlice({
   name: "numberchanger",
   initialState,
   reducers: {
@@ -16,8 +16,8 @@ export const Numberslice = createSlice({
       state.watch = newState;
     },
     removeWishList: (state, action) => {
-      const newState = [...state.watch, action.payload];
-      localStorage.removeItem(storageKey, JSON.stringify(newState));
+      // const newState = [...state.watch, action.payload];
+      // localStorage.Item(storageKey, JSON.stringify(newState));
       state.watch = state.watch.filter((movie) => movie.id !== action.payload);
     },
     incrementer: (state) => {
@@ -27,5 +27,5 @@ export const Numberslice = createSlice({
 });
 
 export const { addToWishList, removeWishList, incrementer } =
-  Numberslice.actions;
-export default Numberslice.reducer;
+  Wishlistslice.actions;
+export default Wishlistslice.reducer;

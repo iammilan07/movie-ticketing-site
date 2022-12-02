@@ -1,9 +1,9 @@
 import React from "react";
-import Movieseats from "./Movieseats";
+import Rightpart from "./Rightpart";
 import "./Style.css";
 import { useLocation } from "react-router-dom";
 
-const Moviedetails = (props) => {
+const Leftpart = (props) => {
   const location = useLocation();
   const { movieDetail } = location.state;
 
@@ -29,10 +29,10 @@ const Moviedetails = (props) => {
             dangerouslySetInnerHTML={{ __html: movieDetail.detail }}
           ></h3>
         </div>
-        <Movieseats />
+        <Rightpart />
       </div>
     </>
   );
 };
 
-export default Moviedetails;
+export default Leftpart;

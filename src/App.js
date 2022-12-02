@@ -7,10 +7,10 @@ import Service from "./pages/service";
 import Home from "./pages/home";
 import Error from "./pages/Error";
 import Announcement from "./components/anouncement";
-import Moviedetails from "./movieDetail/Moviedetails";
+import Leftpart from "./movieDetail/Leftpart";
 import Login from "./Login";
-import Watch from "./components/Watch";
-import Footer from "./pages/Footer";
+import Watch from "./pages/Watch";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="service" element={<Service />} />
           <Route path="*" element={<Error />} />
-          <Route path="moviedetails" element={<Moviedetails />} />
+          <Route path="moviedetails" element={<Leftpart />} />
           <Route path="login" element={<Login />} />
           <Route path="watch" element={<Watch />} />
         </Routes>
