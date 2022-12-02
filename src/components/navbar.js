@@ -12,16 +12,8 @@ import { selectWishListCount } from "../redux/increment/selector";
 import { Box } from "@chakra-ui/react";
 
 const Navbar = () => {
-  // const incrementWishList = useSelector(selectIncrementWishList);
   const count = useSelector(selectWishListCount);
 
-  // const data2 = {
-  //   watch: [{ id: 1 }, { id: 2 }],
-  // };
-  // console.log(data2.watch);
-  // const count = useSelector((state) => state.counter.value);
-  // const getdata = useSelector((state) => state.watchreducer);
-  // console.log(getdata);
   return (
     <Box>
       <nav className="main-nav">

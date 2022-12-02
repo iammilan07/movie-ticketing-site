@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { storageKey } from "../../constants";
 
 const initialState = {
-  watch: [],
+  watch: JSON.parse(localStorage.getItem(storageKey)) || [],
   value: 0,
 };
 
@@ -10,9 +11,12 @@ export const Numberslice = createSlice({
   initialState,
   reducers: {
     addToWishList: (state, action) => {
-      state.watch = [...state.watch, action.payload];
+      const newState = [...state.watch, action.payload];
+      localStorage.setItem(storageKey, JSON.stringify(newState));
+      state.watch = newState;
     },
     removeWishList: (state, action) => {
+      // localStorage.setItem(storageKey, JSON.stringify(newState));
       state.watch = state.watch.filter((movie) => movie.id !== action.payload);
     },
     incrementer: (state) => {
