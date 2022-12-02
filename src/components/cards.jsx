@@ -1,15 +1,15 @@
 import React from "react";
-import "./index.css";
+import "../index.css";
 import { useSelector } from "react-redux";
 import {
   selectIncrementWishList,
   selectIsInWatchList,
   remover,
-} from "./redux/wishlist/index";
+} from "../redux/wishlist/index";
 
 import { Link } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
-import { addToWishList } from "./redux/wishlist/slice";
+import { addToWishList } from "../redux/wishlist/slice";
 import { useDispatch } from "react-redux";
 
 function Cards(props) {

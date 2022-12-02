@@ -7,16 +7,8 @@ import {
   Switch,
   useColorMode,
 } from "@chakra-ui/react";
-import { useSelector, useDispatch } from "react-redux";
 
-import { selectincrease, incrementerr } from "../redux/wishlist/index";
 const App = () => {
-  const dispatch = useDispatch();
-  const numberincrease = useSelector(selectincrease);
-
-  const handlechange = () => {
-    dispatch(incrementerr());
-  };
   const { toggleColorMode } = useColorMode();
 
   return (
@@ -35,8 +27,8 @@ const App = () => {
         <Button mb={6} colorScheme="teal">
           Login
         </Button>
-        Number :{numberincrease}
-        <Button onClick={handlechange}>Clickme</Button>
+
+        <Button>Clickme</Button>
         <Button onClick={toggleColorMode}>Toogle</Button>
       </Flex>
     </Flex>
