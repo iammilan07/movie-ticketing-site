@@ -16,7 +16,8 @@ export const Numberslice = createSlice({
       state.watch = newState;
     },
     removeWishList: (state, action) => {
-      // localStorage.setItem(storageKey, JSON.stringify(newState));
+      const newState = [...state.watch, action.payload];
+      localStorage.removeItem(storageKey, JSON.stringify(newState));
       state.watch = state.watch.filter((movie) => movie.id !== action.payload);
     },
     incrementer: (state) => {

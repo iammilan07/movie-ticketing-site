@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIncrementWishList } from "../redux/increment/selector";
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { removeWishList } from "../redux/increment/Numberslice";
+import { remover } from "../redux/increment/Action";
 
 const Watch = () => {
   const dispatch = useDispatch();
   const incrementWishList = useSelector(selectIncrementWishList);
   const handleRemove = (id) => {
-    dispatch(removeWishList(id));
+    dispatch(remover(id));
   };
 
   return (

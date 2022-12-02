@@ -1,18 +1,18 @@
-// import { useDispatch, useSelector } from "react-redux";
-// import { selectIncrementWishList } from "./selector";
-// import { incrementer, removeWishList } from "./Numberslice";
+import { incrementer, removeWishList } from "./Numberslice";
 
-// // export const handleWishListAdd = (props) => (dispatch) => {
-// //   const incrementWishList = useSelector(selectIncrementWishList);
-
-// //   dispatch(numberReducer.addToWishList(props));
-// //   dispatch(incrementWishList());
-// // };
-
-// export const handleRemove = (id) => (dispatch) => {
-//   dispatch(removeWishList(id));
+// export const adder = (props) => (dispatch) => {
+//   const incrementWishList = useSelector(selectIncrementWishList);
+//   dispatch(addToWishList(props));
+//   dispatch(incrementWishList());
 // };
 
-// export const handlechange = () => {
-//   incrementer();
-// };
+export const remover = (id) => (dispatch) => {
+  dispatch(removeWishList(id));
+};
+
+export const handlechange = () => {
+  incrementer();
+};
+export const incrementerr = () => (dispatch) => {
+  dispatch(incrementer());
+};

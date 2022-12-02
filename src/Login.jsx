@@ -9,14 +9,14 @@ import {
 } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectincrease } from "./redux/increment/selector";
-import { incrementer } from "./redux/increment/Numberslice";
+import { incrementerr } from "./redux/increment/Action";
 
 const App = () => {
   const dispatch = useDispatch();
   const numberincrease = useSelector(selectincrease);
 
   const handlechange = () => {
-    dispatch(incrementer());
+    dispatch(incrementerr());
   };
   const { toggleColorMode } = useColorMode();
 

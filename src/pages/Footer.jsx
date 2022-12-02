@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <Box textAlign="center">
+    <Box textAlign="center" alignItems="baseline">
       <Text fontSize="2xl" paddingBottom="5px">
         A movie app using react redux.
       </Text>
