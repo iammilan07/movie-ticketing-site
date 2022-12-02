@@ -18,25 +18,6 @@ const Rightpart = () => {
     } else newData[name].tempOccupied.push(index);
     setData(newData);
   };
-  // console.log(data);
-
-  // console.log(Sdata);
-
-  // console.log(movieDetail.seat.keys);
-
-  // let a = data.row1.tempOccupied.length;
-  // let b = data.row2.tempOccupied.length;
-  // let c = data.row3.tempOccupied.length;
-  // let d = data.row4.tempOccupied.length;
-
-  // let total = a + b + c + d;
-
-  // let e = data.row4.tempOccupied.price;
-
-  // let price = e;
-
-  // console.log(total);
-
   const seats = movieDetail.seats;
 
   Object.keys(seats);
