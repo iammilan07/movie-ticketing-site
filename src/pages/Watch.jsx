@@ -2,10 +2,10 @@
 import React from "react";
 import "../components/navbar.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIncrementWishList } from "../redux/wishlist/selector";
+// import { selectIncrementWishList } from "../redux/wishlist/selector";
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { remover } from "../redux/wishlist/Action";
+import { remover, selectIncrementWishList } from "../redux/wishlist/index";
 
 const Watch = () => {
   const dispatch = useDispatch();

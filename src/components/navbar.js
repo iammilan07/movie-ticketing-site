@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 import { useSelector } from "react-redux";
-import { selectWishListCount } from "../redux/increment/selector";
+import { selectWishListCount } from "../redux/wishlist/index";
 import { Box } from "@chakra-ui/react";
 
 const Navbar = () => {

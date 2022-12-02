@@ -4,13 +4,13 @@ import { useSelector } from "react-redux";
 import {
   selectIncrementWishList,
   selectIsInWatchList,
-} from "./redux/increment/selector";
+  remover,
+} from "./redux/wishlist/index";
 
 import { Link } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
-import { addToWishList } from "./redux/wishlist/Wishlistslice";
+import { addToWishList } from "./redux/wishlist/slice";
 import { useDispatch } from "react-redux";
-import { remover } from "./redux/wishlist/Action";
 
 function Cards(props) {
   const incrementWishList = useSelector(selectIncrementWishList);

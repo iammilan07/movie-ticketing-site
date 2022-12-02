@@ -8,9 +8,8 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectincrease } from "./redux/increment/selector";
-import { incrementerr } from "./redux/wishlist/Action";
 
+import { selectincrease, incrementerr } from "../redux/wishlist/index";
 const App = () => {
   const dispatch = useDispatch();
   const numberincrease = useSelector(selectincrease);

@@ -1,4 +1,4 @@
-import { incrementer, removeWishList } from "./Wishlistslice";
+import { incrementer, removeWishList } from "./slice";
 
 // export const adder = (props) => (dispatch) => {
 //   const incrementWishList = useSelector(selectIncrementWishList);
