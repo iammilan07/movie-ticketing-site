@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
   watch: [],
+  value: 0,
 };
 
 export const Numberslice = createSlice({
@@ -15,8 +15,12 @@ export const Numberslice = createSlice({
     removeWishList: (state, action) => {
       state.watch = state.watch.filter((movie) => movie.id !== action.payload);
     },
+    incrementer: (state) => {
+      state.value = state.value += 1;
+    },
   },
 });
 
-export const { addToWishList, removeWishList } = Numberslice.actions;
+export const { addToWishList, removeWishList, incrementer } =
+  Numberslice.actions;
 export default Numberslice.reducer;

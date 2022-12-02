@@ -5,14 +5,24 @@ import {
   selectIncrementWishList,
   selectIsInWatchList,
 } from "./redux/increment/selector";
+
 import { Link } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
 import { addToWishList } from "./redux/increment/Numberslice";
 import { useDispatch } from "react-redux";
 import { removeWishList } from "./redux/increment/Numberslice";
+import { useEffect } from "react";
 
 function Cards(props) {
   const incrementWishList = useSelector(selectIncrementWishList);
+  // useEffect(
+  //   (id) => {
+  const data1 = localStorage.getItem("persist:wishlist");
+
+  console.log(data1);
+  //   },
+  //   [number]
+  // );
 
   const isInWatchList = useSelector((state) =>
     selectIsInWatchList(props?.id, state)

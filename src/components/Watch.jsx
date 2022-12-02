@@ -13,6 +13,10 @@ const Watch = () => {
   const handleRemove = (id) => {
     dispatch(removeWishList(id));
   };
+
+  const data1 = JSON.parse(localStorage.getItem("persist:wishlist"));
+  const data2 = JSON.parse(data1.watch);
+  console.log(data2.watch);
   return (
     <Box className="watch-list" paddingX="100px">
       <h1 className="heading_style">Your WatchList !!</h1>
