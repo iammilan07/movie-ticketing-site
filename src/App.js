@@ -7,7 +7,7 @@ import Service from "./pages/service";
 import Home from "./pages/home";
 import Error from "./pages/Error";
 import Announcement from "./components/anouncement";
-import Leftpart from "./movieDetail/Leftpart";
+import Leftpart from "./components/movieDetail/Leftpart";
 import Login from "./pages/Login";
 import Watch from "./pages/Watch";
 import Footer from "./components/Footer";
