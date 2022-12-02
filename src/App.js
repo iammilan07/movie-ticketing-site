@@ -7,10 +7,11 @@ import Service from "./pages/service";
 import Home from "./pages/home";
 import Error from "./pages/Error";
 import Announcement from "./components/anouncement";
-import Leftpart from "./components/movieDetail/Leftpart";
+
 import Login from "./pages/Login";
 import Watch from "./pages/Watch";
 import Footer from "./components/Footer";
+import Moviedetails from "./components/movieDetail/Moviedetails";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="service" element={<Service />} />
           <Route path="*" element={<Error />} />
-          <Route path="moviedetails" element={<Leftpart />} />
+          <Route path="moviedetails" element={<Moviedetails />} />
           <Route path="login" element={<Login />} />
           <Route path="watch" element={<Watch />} />
         </Routes>

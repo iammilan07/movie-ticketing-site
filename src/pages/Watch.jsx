@@ -1,8 +1,7 @@
 // import { Table, Tr, Td } from "@chakra-ui/react";
 import React from "react";
-import "../components/navbar.css";
+import "../assets/styles/index.css";
 import { useDispatch, useSelector } from "react-redux";
-// import { selectIncrementWishList } from "../redux/wishlist/selector";
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { remover, selectIncrementWishList } from "../redux/wishlist/index";

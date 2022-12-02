@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/navbar.css";
+import "../assets/styles/index.css";
 import Cards from "../components/cards";
 import Sdata from "../mockData/Sdata";
 

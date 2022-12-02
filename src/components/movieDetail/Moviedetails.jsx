@@ -1,9 +1,10 @@
 import React from "react";
-import Rightpart from "./Rightpart";
-import "./Style.css";
+import Rightpart from "./Movieseats";
+
+import "../../assets/styles/index.css";
 import { useLocation } from "react-router-dom";
 
-const Leftpart = (props) => {
+const Moviedetails = (props) => {
   const location = useLocation();
   const { movieDetail } = location.state;
 
@@ -35,4 +36,4 @@ const Leftpart = (props) => {
   );
 };
 
-export default Leftpart;
+export default Moviedetails;

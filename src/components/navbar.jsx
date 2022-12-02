@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar.css";
+import "../assets/styles/index.css";
 import { Link } from "react-router-dom";
 import {
   FaFacebookSquare,

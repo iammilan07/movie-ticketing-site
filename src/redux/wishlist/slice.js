@@ -3,7 +3,6 @@ import { storageKey } from "../../constants";
 
 const initialState = {
   watch: JSON.parse(localStorage.getItem(storageKey)) || [],
-  value: 0,
 };
 
 export const Wishlistslice = createSlice({

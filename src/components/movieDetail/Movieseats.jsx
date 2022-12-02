@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Style.css";
+import "../../assets/styles/index.css";
 import { useLocation } from "react-router-dom";
 
-const Rightpart = () => {
+const Movieseats = () => {
   const location = useLocation();
   const { movieDetail } = location.state;
 
@@ -143,4 +143,4 @@ const Rightpart = () => {
   );
 };
 
-export default Rightpart;
+export default Movieseats;
