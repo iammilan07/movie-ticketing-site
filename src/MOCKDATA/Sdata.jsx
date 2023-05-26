@@ -1,4 +1,4 @@
-const Sdata = [
+export const Sdata = [
   {
     id: 1,
     imgsrc:

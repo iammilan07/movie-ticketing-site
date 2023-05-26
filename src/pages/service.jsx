@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/index.css";
 import Cards from "../components/cards";
-import Sdata from "../mockData/Sdata";
+import Sdata from "../MOCKDATA/Sdata";
 
 const Service = () => {
   return (
